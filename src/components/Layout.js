@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 export const getServerSideProps = async () => {
-  console.log('console.')
+  console.log('console')
   return {
     props: {
       time: new Date().toISOString(),
