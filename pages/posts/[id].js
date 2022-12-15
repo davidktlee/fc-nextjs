@@ -5,6 +5,7 @@ import Date from '../../components/Date'
 import utilStyles from '../../styles/utils.module.css'
 import { MDXRemote } from 'next-mdx-remote'
 import CodeBlock from '../../components/CodeBlock'
+import Utterances from '../../components/Utterances'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
@@ -37,10 +38,13 @@ const components = { Button, CodeBlock }
 
 export default function Post({ postData }) {
   return (
-    <Layout>
-      <div className={utilStyles.lightText}>{/* <Date dateString={postData.date} /> */}</div>
-      {postData.contentHtml && <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
-      {postData.mdxSource && <MDXRemote {...postData.mdxSource} components={components} />}
-    </Layout>
+    <>
+      <Layout>
+        <div className={utilStyles.lightText}>{/* <Date dateString={postData.date} /> */}</div>
+        {postData.contentHtml && <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />}
+        {postData.mdxSource && <MDXRemote {...postData.mdxSource} components={components} />}
+      </Layout>
+      <Utterances />
+    </>
   )
 }
