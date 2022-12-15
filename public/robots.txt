@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fc-nextjs-davidktlee.vercel.app
+
+# Sitemaps
+Sitemap: https://fc-nextjs-davidktlee.vercel.app/sitemap.xml
