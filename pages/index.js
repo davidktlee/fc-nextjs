@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteTitle } from '../components/Layout'
 import { getSortedPostsData } from '../lib/posts'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
