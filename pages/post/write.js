@@ -46,14 +46,7 @@ export default function Write() {
         <br />
         <input type="text" placeholder="title" name="title" ref={titleRef} />
         <br />
-        <textarea
-          name="text-area"
-          id="text-area"
-          name="content"
-          cols="30"
-          rows="10"
-          ref={contentRef}
-        />
+        <textarea name="text-area" id="text-area" cols="30" rows="10" ref={contentRef} />
         <button>저장</button>
       </form>
       {showLink && (
